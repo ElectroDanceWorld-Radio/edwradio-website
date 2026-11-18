@@ -15,7 +15,9 @@ export default function AudioPlayer() {
     audio.volume = volume;
     audioRef.current = audio;
 
-    audio.play().then(() => setIsPlaying(true)).catch(() => {});
+    audio.play()
+      .then(() => setIsPlaying(true))
+      .catch(() => {});
 
     return () => {
       audio.pause();

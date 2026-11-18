@@ -5,7 +5,7 @@
       "home": "Inicio",
       "events": "Eventos",
       "podcast": "Podcast",
-      "playlists": "Listas",
+      "playlists": "Playlists",
       "about": "Acerca de",
       "contact": "Contacto"
     }
@@ -30,19 +30,19 @@
         "title": "A Summer Story 2025",
         "excerpt": "Este año de nuevo por el A Summer Story hacía tiempo que no volvíamos por este festival ¿será que decimos las cosas tal cual? ¿Que nos metemos en los recovecos que nadie se quiere meter reconociendo también el esfuerzo técnico que...",
         "date": "Jun 21, 2025",
-        "image": "/news1.png"
+        "image": "/news1.webp"
       },
       {
         "title": "A Summer Story 2024",
         "excerpt": "El 21 y el 22 de Junio Arganda del Rey y La Ciudad del Rock abren las puertas del verano con una espectacular producción y con un despliegue técnico y humano como nunca antes visto. Contamos con un line-up internacional que incluye a...",
         "date": "Jun 21, 2024",
-        "image": "/news2.png"
+        "image": "/news2.webp"
       },
       {
         "title": "¿Cuál es la historia del baile hardcore?",
         "excerpt": "La Historia del Baile Hardcore El baile hardcore, también conocido como Hardcore Dancing, es un fenómeno cultural que se originó en la escena musical hardcore. Este género musical surgió en Alemania a finales...",
         "date": "Mar 3, 2024",
-        "image": "/news3.png"
+        "image": "/news3.webp"
       }
     ]
   },

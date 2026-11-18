@@ -37,7 +37,7 @@ export default function Navbar({ dict, lang }: NavbarProps) {
     <header className="sticky top-0 z-50 glass border-b border-white/5">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href={`/${lang}`} className="flex items-center">
-          <img src={getAssetPath('/logo-nav.png')} alt="EDW Radio" className="h-8 md:h-12 object-contain" />
+          <img src={getAssetPath('/logo-nav.webp')} alt="EDW Radio" className="h-8 md:h-12 object-contain" />
         </Link>
 
         {/* Desktop menu */}
