@@ -15,8 +15,8 @@ function getLocale(request: NextRequest): string {
   for (const lang of languages) {
     // Exact match first (e.g. "es" or "en")
     if (locales.includes(lang)) return lang;
-    // Prefix match (e.g. "es-MX" -> "es", "en-US" -> "en")
-    const prefix = lang.split('-')[0];
+    // Base language match (e.g. "es-MX" -> "es", "en-US" -> "en")
+    const prefix = lang.split(/[-_]/)[0];
     if (locales.includes(prefix)) return prefix;
   }
 
