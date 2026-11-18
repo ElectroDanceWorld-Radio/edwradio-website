@@ -3,11 +3,10 @@
     "title": "EDW Radio",
     "nav": {
       "home": "Home",
-      "events": "Events",
-      "podcast": "Podcast",
-      "playlists": "Playlists",
-      "about": "About",
-      "contact": "Contact"
+      "products": "Products",
+      "news": "News",
+      "music": "Music",
+      "about": "About"
     }
   },
   "home": {
@@ -20,8 +19,7 @@
     "text1b": "Our music player at the bottom of the page lets you start enjoying electronic music immediately.",
     "text2a": "From pulsating Techno to energetic House and captivating Trance rhythms, our track selection is designed to satisfy the tastes of true electronic music fans and those who are not so much — listen to us and follow us on our social networks to stay up to date.",
     "text2b": "Explore our carefully designed sections so you can dive into the complete experience.",
-    "imageAlt": "ElectroDanceWorld DJ live",
-    "grooverText": "Submit your music to us through Groover, we guarantee we'll listen to it and give you our feedback!"
+    "imageAlt": "ElectroDanceWorld DJ live"
   },
   "news": {
     "heading": "News",
@@ -74,26 +72,73 @@
       }
     ]
   },
+  "music": {
+    "title": "Playlists",
+    "text": "Coming soon — our curated playlists will be available here. Stay tuned for the best electronic music mixes from Techno, House, and Trance."
+  },
+  "products": {
+    "buy": "Buy",
+    "items": [
+      {
+        "title": "360° 5.6K DJ Session Recording",
+        "subtitle": "€60/min"
+      },
+      {
+        "title": "ADS / Co-Marketing Contact",
+        "subtitle": "Free"
+      },
+      {
+        "title": "360° 5.6K High-Quality Video without Watermark",
+        "subtitle": "€3/min"
+      },
+      {
+        "title": "High-Quality Video (4K 16:9) without Watermark",
+        "subtitle": "€2/min"
+      },
+      {
+        "title": "Video Noise Removal",
+        "subtitle": "€1.50/min"
+      },
+      {
+        "title": "Social Media Management",
+        "subtitle": "€200"
+      },
+      {
+        "title": "Enable TikTok Lives",
+        "subtitle": "€7"
+      },
+      {
+        "title": "60 Tostarica Cookies with Our Logo",
+        "subtitle": "€30"
+      },
+      {
+        "title": "Facebook ADS Mention/post",
+        "subtitle": "€500"
+      }
+    ]
+  },
   "footer": {
     "social": {
       "title": "Social",
       "facebook": "Facebook",
       "instagram": "Instagram",
       "youtube": "YouTube",
-      "odysee": "Odysee"
+      "odysee": "Odysee",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp"
     },
     "hearUsAt": {
       "title": "Hear us at",
       "spotify": "Spotify",
       "deezer": "Deezer",
-      "soundcloud": "SoundCloud"
+      "soundcloud": "SoundCloud",
+      "youtubeMusic": "YouTube Music"
     },
     "links": {
       "title": "Links",
       "home": "Home",
-      "events": "Events",
-      "about": "About",
-      "contact": "Contact"
+      "news": "News",
+      "about": "About"
     },
     "info": {
       "title": "Info",

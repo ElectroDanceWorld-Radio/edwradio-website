@@ -3,11 +3,10 @@
     "title": "EDW Radio",
     "nav": {
       "home": "Inicio",
-      "events": "Eventos",
-      "podcast": "Podcast",
-      "playlists": "Playlists",
-      "about": "Acerca de",
-      "contact": "Contacto"
+      "products": "Productos",
+      "news": "Noticias",
+      "music": "Música",
+      "about": "Sobre nosotros"
     }
   },
   "home": {
@@ -20,8 +19,7 @@
     "text1b": "Nuestro reproductor de música en la parte inferior de la página te permite comenzar a disfrutar de la música electrónica de inmediato.",
     "text2a": "Desde el Techno pulsante hasta el House enérgico y los ritmos Trance cautivantes, nuestra selección de pistas está diseñada para satisfacer los gustos de los verdaderos fanáticos de la electrónica y de los no tan fanáticos escúchanos y síguenos en nuestras redes para estar al día.",
     "text2b": "Explora nuestras secciones cuidadosamente diseñadas para que te sumerjas en la experiencia completa.",
-    "imageAlt": "ElectroDanceWorld DJ en vivo",
-    "grooverText": "Envíanos tu tema a través de Groover, ¡te garantizamos que lo escucharemos y te daremos nuestra opinión!"
+    "imageAlt": "ElectroDanceWorld DJ en vivo"
   },
   "news": {
     "heading": "Noticias",
@@ -74,26 +72,73 @@
       }
     ]
   },
+  "music": {
+    "title": "Listas de reproducción",
+    "text": "Próximamente — nuestras listas de reproducción curadas estarán disponibles aquí. Mantente atento a las mejores mezclas de música electrónica de Techno, House y Trance."
+  },
+  "products": {
+    "buy": "Comprar",
+    "items": [
+      {
+        "title": "Grabación de sesión DJ 360º 5.6K",
+        "subtitle": "60€/min"
+      },
+      {
+        "title": "Contacto ADS / Co-Marketing",
+        "subtitle": "Gratis"
+      },
+      {
+        "title": "Video 360º en alta calidad 5.6K sin marca de agua",
+        "subtitle": "3€/min"
+      },
+      {
+        "title": "Video en alta calidad (4K 16:9) sin marca de agua",
+        "subtitle": "2€/min"
+      },
+      {
+        "title": "Eliminación de ruido video",
+        "subtitle": "1,50€/min"
+      },
+      {
+        "title": "Gestión de RRSS",
+        "subtitle": "200€"
+      },
+      {
+        "title": "Habilitar lives en Tiktok",
+        "subtitle": "7€"
+      },
+      {
+        "title": "60 Galletas Tostarica con nuestro logo",
+        "subtitle": "30€"
+      },
+      {
+        "title": "Facebook ADS Mention/post",
+        "subtitle": "500€"
+      }
+    ]
+  },
   "footer": {
     "social": {
       "title": "Redes Sociales",
       "facebook": "Facebook",
       "instagram": "Instagram",
       "youtube": "YouTube",
-      "odysee": "Odysee"
+      "odysee": "Odysee",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp"
     },
     "hearUsAt": {
       "title": "Escúchanos en",
       "spotify": "Spotify",
       "deezer": "Deezer",
-      "soundcloud": "SoundCloud"
+      "soundcloud": "SoundCloud",
+      "youtubeMusic": "YouTube Music"
     },
     "links": {
       "title": "Enlaces",
       "home": "Inicio",
-      "events": "Eventos",
-      "about": "Acerca de",
-      "contact": "Contacto"
+      "news": "Noticias",
+      "about": "Sobre nosotros"
     },
     "info": {
       "title": "Info",

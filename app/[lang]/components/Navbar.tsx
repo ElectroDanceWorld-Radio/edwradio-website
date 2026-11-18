@@ -9,11 +9,10 @@ interface NavbarProps {
     header: {
       nav: {
         home: string;
-        events: string;
-        podcast: string;
-        playlists: string;
+        products: string;
+        news: string;
+        music: string;
         about: string;
-        contact: string;
       };
     };
   };
@@ -26,11 +25,10 @@ export default function Navbar({ dict, lang }: NavbarProps) {
 
   const navItems = [
     { href: `${prefix}/`, label: dict.header.nav.home },
-    { href: `${prefix}/events`, label: dict.header.nav.events },
-    { href: `${prefix}/podcast`, label: dict.header.nav.podcast },
-    { href: `${prefix}/playlists`, label: dict.header.nav.playlists },
+    { href: `${prefix}/products`, label: dict.header.nav.products },
+    { href: `${prefix}/news`, label: dict.header.nav.news },
+    { href: `${prefix}/music`, label: dict.header.nav.music },
     { href: `${prefix}/about`, label: dict.header.nav.about },
-    { href: `${prefix}/contact`, label: dict.header.nav.contact },
   ];
 
   return (

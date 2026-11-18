@@ -7,7 +7,6 @@ interface WelcomeSectionProps {
   text2a: string;
   text2b: string;
   imageAlt: string;
-  grooverText: string;
 }
 
 export default function WelcomeSection({
@@ -17,7 +16,6 @@ export default function WelcomeSection({
   text2a,
   text2b,
   imageAlt,
-  grooverText,
 }: WelcomeSectionProps) {
   return (
     <section className="py-[50px] bg-subtle-gradient bg-grid-pattern relative overflow-hidden">
@@ -51,27 +49,12 @@ export default function WelcomeSection({
             <div className="image-frame h-full md:min-h-[300px]">
               <div
                 className="w-full h-full min-h-[200px] md:min-h-[300px] bg-cover bg-center"
-                style={{ backgroundImage: `url(${getAssetPath('/welcome.png')})` }}
+                style={{ backgroundImage: `url(${getAssetPath('/welcome.webp')})` }}
                 role="img"
                 aria-label={imageAlt}
               />
             </div>
           </div>
-        </div>
-
-        {/* Section separator */}
-        <div className="section-separator" />
-
-        {/* Groover Widget */}
-        <div className="mt-6 glass rounded-xl p-4 animate-fade-in-up-delay-3">
-          <iframe
-            loading="lazy"
-            width="100%"
-            height="130"
-            src={`https://groover.co/influencer/widget/0.electrodanceworld-radio?color=s-black&ratio=rectangle&format=responsive&size=360&customText=${encodeURIComponent(grooverText)}&picture=true`}
-            frameBorder="0"
-            title="Groover - Submit your music"
-          />
         </div>
       </div>
     </section>

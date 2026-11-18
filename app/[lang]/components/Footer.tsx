@@ -9,19 +9,21 @@ interface FooterProps {
         instagram: string;
         youtube: string;
         odysee: string;
+        telegram: string;
+        whatsapp: string;
       };
       hearUsAt: {
         title: string;
         spotify: string;
         deezer: string;
         soundcloud: string;
+        youtubeMusic: string;
       };
       links: {
         title: string;
         home: string;
-        events: string;
+        news: string;
         about: string;
-        contact: string;
       };
       info: {
         title: string;
@@ -68,6 +70,16 @@ export default function Footer({ dict, lang }: FooterProps) {
                   {dict.footer.social.odysee}
                 </a>
               </li>
+              <li>
+                <a href="https://t.me/ElectroDanceWorld" className="hover:text-purple-300 transition-colors duration-200">
+                  {dict.footer.social.telegram}
+                </a>
+              </li>
+              <li>
+                <a href="https://www.whatsapp.com/channel/0029VaCZkiP8PgsIucMd253y" className="hover:text-purple-300 transition-colors duration-200">
+                  {dict.footer.social.whatsapp}
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -90,6 +102,11 @@ export default function Footer({ dict, lang }: FooterProps) {
                   {dict.footer.hearUsAt.soundcloud}
                 </a>
               </li>
+              <li>
+                <a href="https://music.youtube.com/@electrodanceworldradio" className="hover:text-purple-300 transition-colors duration-200">
+                  {dict.footer.hearUsAt.youtubeMusic}
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -103,18 +120,13 @@ export default function Footer({ dict, lang }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/events`} className="hover:text-purple-300 transition-colors duration-200">
-                  {dict.footer.links.events}
+                <Link href={`${prefix}/news`} className="hover:text-purple-300 transition-colors duration-200">
+                  {dict.footer.links.news}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/about`} className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.links.about}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${prefix}/contact`} className="hover:text-purple-300 transition-colors duration-200">
-                  {dict.footer.links.contact}
                 </Link>
               </li>
             </ul>

@@ -19,7 +19,6 @@ export default async function Page() {
         text2a={dict.welcome.text2a}
         text2b={dict.welcome.text2b}
         imageAlt={dict.welcome.imageAlt}
-        grooverText={dict.welcome.grooverText}
       />
 
       {/* News Section */}
