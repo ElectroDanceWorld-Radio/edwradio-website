@@ -1,0 +1,105 @@
+{
+  "header": {
+    "title": "EDW Radio",
+    "nav": {
+      "home": "Inicio",
+      "events": "Eventos",
+      "podcast": "Podcast",
+      "playlists": "Listas",
+      "about": "Acerca de",
+      "contact": "Contacto"
+    }
+  },
+  "home": {
+    "welcome": "Te damos la bienvenida a EDW Radio",
+    "description": "Tu estación de radio favorita transmitiendo en vivo."
+  },
+  "welcome": {
+    "title": "Bienvenidos",
+    "text1a": "Te damos la bienvenida a ElectroDanceWorld, tu destino definitivo para sumergirte en el emocionante mundo de la música electrónica. Aquí en ElectroDanceWorld, estamos comprometidos en ofrecerte una experiencia auditiva única y emocionante que te mantendrá en movimiento y en sintonía con los ritmos más vibrantes.",
+    "text1b": "Nuestro reproductor de música en la parte inferior de la página te permite comenzar a disfrutar de la música electrónica de inmediato.",
+    "text2a": "Desde el Techno pulsante hasta el House enérgico y los ritmos Trance cautivantes, nuestra selección de pistas está diseñada para satisfacer los gustos de los verdaderos fanáticos de la electrónica y de los no tan fanáticos escúchanos y síguenos en nuestras redes para estar al día.",
+    "text2b": "Explora nuestras secciones cuidadosamente diseñadas para que te sumerjas en la experiencia completa.",
+    "imageAlt": "ElectroDanceWorld DJ en vivo",
+    "grooverText": "Envíanos tu tema a través de Groover, ¡te garantizamos que lo escucharemos y te daremos nuestra opinión!"
+  },
+  "news": {
+    "heading": "Noticias",
+    "items": [
+      {
+        "title": "A Summer Story 2025",
+        "excerpt": "Este año de nuevo por el A Summer Story hacía tiempo que no volvíamos por este festival ¿será que decimos las cosas tal cual? ¿Que nos metemos en los recovecos que nadie se quiere meter reconociendo también el esfuerzo técnico que...",
+        "date": "Jun 21, 2025",
+        "image": "/news1.png"
+      },
+      {
+        "title": "A Summer Story 2024",
+        "excerpt": "El 21 y el 22 de Junio Arganda del Rey y La Ciudad del Rock abren las puertas del verano con una espectacular producción y con un despliegue técnico y humano como nunca antes visto. Contamos con un line-up internacional que incluye a...",
+        "date": "Jun 21, 2024",
+        "image": "/news2.png"
+      },
+      {
+        "title": "¿Cuál es la historia del baile hardcore?",
+        "excerpt": "La Historia del Baile Hardcore El baile hardcore, también conocido como Hardcore Dancing, es un fenómeno cultural que se originó en la escena musical hardcore. Este género musical surgió en Alemania a finales...",
+        "date": "Mar 3, 2024",
+        "image": "/news3.png"
+      }
+    ]
+  },
+  "content": {
+    "section1_title": "Colaboraciones",
+    "section1_text": "Nos enorgullece colaborar con DJs, promotores y artistas que comparten nuestra pasión por la música electrónica. Desde transmisiones en vivo desde los eventos más exclusivos hasta colaboraciones en mezclas temáticas, estamos comprometidos en llevar la experiencia de la música electrónica a nuevos estados. Mantente atento a nuestros eventos y colaboraciones emocionantes.",
+    "collaborations": [
+      {
+        "title": "A summer story",
+        "text": "Nos enorgullece decir que hemos asistido como prensa al principal festival de electrónica en Madrid varios años con el compromiso de mostrar en tiempo real la emocionante vibra que se vive en el festival iniciando así el verano.",
+        "button": "Details"
+      },
+      {
+        "title": "Club",
+        "text": "Cubrimos varios eventos en clubs de la ciudad y fuera de la ciudad gracias a nuestro equipo de corresponsales que tenemos en toda España, USA, México, entre otros.",
+        "button": "Details"
+      },
+      {
+        "title": "Kream",
+        "text": "Una fiesta de Psytrance que no te la puedes perder si pasas por Madrid, una vez al mes hacen una fiesta donde todo fluye y vibra con el baile al son de los sonidos Psycodelicos del PsyTrance y el PsyTechno.",
+        "button": "Details"
+      },
+      {
+        "title": "Privado",
+        "text": "Aparte de cubrir tu evento o fiesta, prestamos servicios de Diseño gráfico, Web, Edición de video tanto 16:9/9:16 como 360º, Eliminación de ruido de video y fotografía profesional, entre otros.",
+        "linkText": "Eliminación de ruido de video",
+        "linkUrl": "https://shop.beacons.ai/electrodanceworldradio/e37e0680-d9cb-462a-b3b6-c70bceb1f3e9",
+        "button": "Details"
+      }
+    ]
+  },
+  "footer": {
+    "social": {
+      "title": "Redes Sociales",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "odysee": "Odysee"
+    },
+    "hearUsAt": {
+      "title": "Escúchanos en",
+      "spotify": "Spotify",
+      "deezer": "Deezer",
+      "soundcloud": "SoundCloud"
+    },
+    "links": {
+      "title": "Enlaces",
+      "home": "Inicio",
+      "events": "Eventos",
+      "about": "Acerca de",
+      "contact": "Contacto"
+    },
+    "info": {
+      "title": "Info",
+      "description": "ElectroDanceWorld — tu destino definitivo para la música electrónica. Transmitiendo 24/7 el mejor Techno, House y Trance.",
+      "email": "Contáctanos"
+    },
+    "copyright": "EDW Radio © 2026"
+  }
+}
