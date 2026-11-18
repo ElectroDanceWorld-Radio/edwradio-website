@@ -1,3 +1,5 @@
+import { getAssetPath } from './getAssetPath';
+
 interface WelcomeSectionProps {
   title: string;
   text1a: string;
@@ -49,7 +51,7 @@ export default function WelcomeSection({
             <div className="image-frame h-full md:min-h-[300px]">
               <div
                 className="w-full h-full min-h-[200px] md:min-h-[300px] bg-cover bg-center"
-                style={{ backgroundImage: 'url(/welcome.png)' }}
+                style={{ backgroundImage: `url(${getAssetPath('/welcome.png')})` }}
                 role="img"
                 aria-label={imageAlt}
               />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { getAssetPath } from './getAssetPath';
 
 type NewsItem = {
   title: string;
@@ -39,7 +40,7 @@ export default function NewsCarousel({ heading, news }: NewsCarouselProps) {
           {/* Image */}
           <div
             className="h-48 sm:h-72 w-full bg-cover bg-center transition-transform duration-500 hover:scale-105"
-            style={{ backgroundImage: `url(${item.image})` }}
+            style={{ backgroundImage: `url(${getAssetPath(item.image)})` }}
           />
 
           {/* Content */}

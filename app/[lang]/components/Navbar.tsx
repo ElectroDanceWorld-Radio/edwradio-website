@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { getAssetPath } from './getAssetPath';
 
 interface NavbarProps {
   dict: {
@@ -16,25 +17,27 @@ interface NavbarProps {
       };
     };
   };
+  lang: string;
 }
 
-export default function Navbar({ dict }: NavbarProps) {
+export default function Navbar({ dict, lang }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const prefix = `/${lang}`;
 
   const navItems = [
-    { href: '/', label: dict.header.nav.home },
-    { href: '/events', label: dict.header.nav.events },
-    { href: '/podcast', label: dict.header.nav.podcast },
-    { href: '/playlists', label: dict.header.nav.playlists },
-    { href: '/about', label: dict.header.nav.about },
-    { href: '/contact', label: dict.header.nav.contact },
+    { href: `${prefix}/`, label: dict.header.nav.home },
+    { href: `${prefix}/events`, label: dict.header.nav.events },
+    { href: `${prefix}/podcast`, label: dict.header.nav.podcast },
+    { href: `${prefix}/playlists`, label: dict.header.nav.playlists },
+    { href: `${prefix}/about`, label: dict.header.nav.about },
+    { href: `${prefix}/contact`, label: dict.header.nav.contact },
   ];
 
   return (
     <header className="sticky top-0 z-50 glass border-b border-white/5">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center">
-          <img src="/logo-nav.png" alt="EDW Radio" className="h-8 md:h-12 object-contain" />
+        <Link href={`/${lang}`} className="flex items-center">
+          <img src={getAssetPath('/logo-nav.png')} alt="EDW Radio" className="h-8 md:h-12 object-contain" />
         </Link>
 
         {/* Desktop menu */}

@@ -1,3 +1,5 @@
+import { getAssetPath } from './getAssetPath';
+
 export default function Hero() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
@@ -5,7 +7,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/hero.png)',
+          backgroundImage: `url(${getAssetPath('/hero.png')})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundColor: '#1a1a2e',
@@ -34,7 +36,7 @@ export default function Hero() {
 
       {/* Logo */}
       <div className="relative z-20">
-        <img src="/logo.png" alt="EDW Radio" className="h-64 max-w-[80vw] object-contain" />
+        <img src={getAssetPath('/logo.png')} alt="EDW Radio" className="h-64 max-w-[80vw] object-contain" />
       </div>
 
     </section>

@@ -1,8 +1,41 @@
 import Link from 'next/link';
-import { getDictionary } from '../dictionaries';
 
-export default async function Footer() {
-  const dict = await getDictionary();
+interface FooterProps {
+  dict: {
+    footer: {
+      social: {
+        title: string;
+        facebook: string;
+        instagram: string;
+        youtube: string;
+        odysee: string;
+      };
+      hearUsAt: {
+        title: string;
+        spotify: string;
+        deezer: string;
+        soundcloud: string;
+      };
+      links: {
+        title: string;
+        home: string;
+        events: string;
+        about: string;
+        contact: string;
+      };
+      info: {
+        title: string;
+        description: string;
+        email: string;
+      };
+      copyright: string;
+    };
+  };
+  lang: string;
+}
+
+export default function Footer({ dict, lang }: FooterProps) {
+  const prefix = `/${lang}`;
 
   return (
     <footer className="relative bg-[#0a0312] text-gray-400">
@@ -65,22 +98,22 @@ export default async function Footer() {
             <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wider">{dict.footer.links.title}</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="hover:text-purple-300 transition-colors duration-200">
+                <Link href={`${prefix}/`} className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.links.home}
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="hover:text-purple-300 transition-colors duration-200">
+                <Link href={`${prefix}/events`} className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.links.events}
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-purple-300 transition-colors duration-200">
+                <Link href={`${prefix}/about`} className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.links.about}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-purple-300 transition-colors duration-200">
+                <Link href={`${prefix}/contact`} className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.links.contact}
                 </Link>
               </li>

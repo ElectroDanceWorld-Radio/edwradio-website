@@ -34,11 +34,11 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col pb-16">
-        <Navbar dict={dict} />
+        <Navbar dict={dict} lang={lang} />
         <main className="flex-1">
           {children}
         </main>
-        <Footer />
+        <Footer dict={dict} lang={lang} />
         <AudioPlayer />
       </body>
     </html>
