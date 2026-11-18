@@ -46,16 +46,16 @@
   },
   "content": {
     "section1_title": "Colaboraciones",
-    "section1_text": "Nos enorgullece colaborar con DJs, promotores y artistas que comparten nuestra pasión por la música electrónica. Desde transmisiones en vivo desde los eventos más exclusivos hasta colaboraciones en mezclas temáticas, estamos comprometidos en llevar la experiencia de la música electrónica a nuevos estados. Mantente atento a nuestros eventos y colaboraciones emocionantes.",
+    "section1_text": "Nos enorgullece colaborar con DJs, promotores, artistas y proyectos que comparten nuestra pasión por la música electrónica. Desde transmisiones en vivo desde los eventos más exclusivos hasta colaboraciones en mezclas temáticas, estamos comprometidos en llevar la experiencia de la música electrónica a nuevos estados. Mantente atento a nuestros eventos y colaboraciones emocionantes.",
     "collaborations": [
       {
         "title": "A summer story",
-        "text": "Nos enorgullece decir que hemos asistido como prensa al principal festival de electrónica en Madrid varios años con el compromiso de mostrar en tiempo real la emocionante vibra que se vive en el festival iniciando así el verano.",
+        "text": "Nos enorgullece decir que hemos colaborado con el principal festival de electrónica en Madrid varios años con el compromiso de mostrar en tiempo real la emocionante vibra que se vive en el festival iniciando así el verano.",
         "button": "Details"
       },
       {
         "title": "Club",
-        "text": "Cubrimos varios eventos en clubs de la ciudad y fuera de la ciudad gracias a nuestro equipo de corresponsales que tenemos en toda España, USA, México, entre otros.",
+        "text": "Cubrimos varios eventos en clubs de la ciudad y fuera de la ciudad gracias a nuestro equipo de corresponsales que tenemos en toda España, USA, México, Argentina entre otros.",
         "button": "Details"
       },
       {
@@ -89,15 +89,15 @@
       },
       {
         "title": "Video 360º en alta calidad 5.6K sin marca de agua",
-        "subtitle": "3€/min"
+        "subtitle": "5€/min"
       },
       {
         "title": "Video en alta calidad (4K 16:9) sin marca de agua",
-        "subtitle": "2€/min"
+        "subtitle": "3€/min"
       },
       {
         "title": "Eliminación de ruido video",
-        "subtitle": "1,50€/min"
+        "subtitle": "3€/min"
       },
       {
         "title": "Gestión de RRSS",
@@ -125,7 +125,8 @@
       "youtube": "YouTube",
       "odysee": "Odysee",
       "telegram": "Telegram",
-      "whatsapp": "WhatsApp"
+      "whatsapp": "WhatsApp",
+      "whatsappUnavailable": "No disponible por ahora"
     },
     "hearUsAt": {
       "title": "Escúchanos en",
@@ -142,9 +143,10 @@
     },
     "info": {
       "title": "Info",
-      "description": "ElectroDanceWorld — tu destino definitivo para la música electrónica. Transmitiendo 24/7 el mejor Techno, House y Trance.",
+      "description": "ElectroDanceWorld — tu destino definitivo para la música electrónica. Transmitiendo 24/7 el mejor Techno, House y Trance, entre otros.",
       "email": "Contáctanos"
     },
-    "copyright": "EDW Radio © 2026"
+    "copyright": "EDW Radio © 2026",
+    "Reconocimiento": "@DisketteFox,@carlosnewmusic y a todos los voluntarios que hacen posible ElectroDanceWorld"
   }
 }

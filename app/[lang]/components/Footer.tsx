@@ -11,6 +11,7 @@ interface FooterProps {
         odysee: string;
         telegram: string;
         whatsapp: string;
+        whatsappUnavailable: string;
       };
       hearUsAt: {
         title: string;
@@ -61,7 +62,7 @@ export default function Footer({ dict, lang }: FooterProps) {
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/channel/UCwkCG-P1mgOrouWrYpLfVKQ" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://www.youtube.com/channel/UCwkCG-P1mgOrouWrYpLfVKQ?sub_confirmation=1" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.social.youtube}
                 </a>
               </li>
@@ -76,9 +77,9 @@ export default function Footer({ dict, lang }: FooterProps) {
                 </a>
               </li>
               <li>
-                <a href="https://www.whatsapp.com/channel/0029VaCZkiP8PgsIucMd253y" className="hover:text-purple-300 transition-colors duration-200">
-                  {dict.footer.social.whatsapp}
-                </a>
+                <span className="text-gray-500">
+                  {dict.footer.social.whatsapp}: {dict.footer.social.whatsappUnavailable}
+                </span>
               </li>
             </ul>
           </div>

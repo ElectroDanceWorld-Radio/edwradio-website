@@ -125,7 +125,8 @@
       "youtube": "YouTube",
       "odysee": "Odysee",
       "telegram": "Telegram",
-      "whatsapp": "WhatsApp"
+      "whatsapp": "WhatsApp",
+      "whatsappUnavailable": "Unavailable for now until channel access is restored"
     },
     "hearUsAt": {
       "title": "Hear us at",

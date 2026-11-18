@@ -3,23 +3,33 @@
 import { useState, useEffect, useRef } from "react";
 
 const STREAM_URL = "https://stream-150.zeno.fm/g325adzcrm0uv?zs=_3XiPiDZTtOeiQYzXN2qZQ";
+const DEFAULT_VOLUME = 0.7;
 
 export default function AudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.7);
+  const [volume, setVolume] = useState(DEFAULT_VOLUME);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const userInteractedRef = useRef(false);
 
   useEffect(() => {
     const audio = new Audio(STREAM_URL);
     audio.preload = "auto";
-    audio.volume = volume;
+    audio.volume = DEFAULT_VOLUME;
     audioRef.current = audio;
 
-    audio.play()
-      .then(() => setIsPlaying(true))
-      .catch(() => {});
+    const startPlayback = () => {
+      if (userInteractedRef.current) return;
+      audio.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
+    };
+
+    if (document.readyState === "complete") {
+      startPlayback();
+    } else {
+      window.addEventListener("load", startPlayback, { once: true });
+    }
 
     return () => {
+      window.removeEventListener("load", startPlayback);
       audio.pause();
       audio.src = "";
     };
@@ -33,15 +43,18 @@ export default function AudioPlayer() {
 
   const togglePlay = () => {
     if (!audioRef.current) return;
+    userInteractedRef.current = true;
     if (isPlaying) {
       audioRef.current.pause();
+      setIsPlaying(false);
     } else {
       // Reconnect stream on play
       audioRef.current.src = STREAM_URL;
       audioRef.current.load();
-      audioRef.current.play().catch(() => {});
+      audioRef.current.play()
+        .then(() => setIsPlaying(true))
+        .catch(() => setIsPlaying(false));
     }
-    setIsPlaying(!isPlaying);
   };
 
   return (
