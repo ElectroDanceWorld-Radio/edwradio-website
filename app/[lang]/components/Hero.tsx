@@ -1,8 +1,10 @@
 import { getAssetPath } from './getAssetPath';
+import { getDictionary } from '../dictionaries';
 
-export default function Hero() {
+export default async function Hero() {
+  const dict = await getDictionary();
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative h-[500px] md:h-[650px] w-full flex items-center justify-center overflow-hidden">
       {/* Static background */}
       <div
         className="absolute inset-0 z-0"
@@ -34,9 +36,25 @@ export default function Hero() {
         />
       </div>
 
-      {/* Logo */}
-      <div className="relative z-20">
-        <img src={getAssetPath('/logo.webp')} alt="EDW Radio" className="h-64 max-w-[80vw] object-contain" />
+      {/* Branding: Logo | Tagline */}
+      <div className="relative z-20 flex items-center gap-4 md:gap-8 max-w-5xl mx-auto px-4">
+        {/* Logo - left, smaller */}
+        <img
+          src={getAssetPath('/logo.webp')}
+          alt="EDW Radio"
+          className="h-24 md:h-32 lg:h-40 flex-shrink-0 object-contain"
+        />
+        {/* Vertical divider bar */}
+        <div className="hidden md:block w-px h-24 md:h-32 bg-gradient-to-b from-transparent via-purple-400 to-transparent flex-shrink-0" />
+        {/* Tagline - right, big text */}
+        <div className="text-center md:text-left">
+          <p className="text-xl md:text-3xl lg:text-4xl font-bold text-gradient leading-snug title-bg">
+            {dict.home.tagline}
+          </p>
+          <p className="text-lg md:text-2xl lg:text-3xl text-purple-300 leading-snug mt-1">
+            {dict.home.taglineSub}
+          </p>
+        </div>
       </div>
 
     </section>

@@ -18,6 +18,8 @@ interface FooterProps {
         deezer: string;
         soundcloud: string;
         youtubeMusic: string;
+        applePodcasts: string;
+        amazonMusic: string;
       };
       links: {
         title: string;
@@ -107,6 +109,16 @@ export default function Footer({ dict, lang }: FooterProps) {
                   {dict.footer.hearUsAt.youtubeMusic}
                 </a>
               </li>
+              <li>
+                <a href="https://podcasts.apple.com/us/podcast/electrodanceworld-radio-programs/id6836433999" className="hover:text-purple-300 transition-colors duration-200">
+                  {dict.footer.hearUsAt.applePodcasts}
+                </a>
+              </li>
+              <li>
+                <a href="https://music.amazon.es/podcasts/395c417d-fe32-4249-9a14-9cd78d276a83" className="hover:text-purple-300 transition-colors duration-200">
+                  {dict.footer.hearUsAt.amazonMusic}
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -144,7 +156,7 @@ export default function Footer({ dict, lang }: FooterProps) {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-white/5">
+      <div className="border-t border-white/5 pb-16">
         <p className="text-center py-6 text-sm text-gray-500">{dict.footer.copyright}</p>
       </div>
     </footer>

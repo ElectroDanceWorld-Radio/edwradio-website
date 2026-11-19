@@ -17,6 +17,26 @@ type NewsCarouselProps = {
 
 export default function NewsCarousel({ heading, news }: NewsCarouselProps) {
   const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) next();
+    else if (isRightSwipe) prev();
+  };
 
   const prev = () => setIndex((i) => (i === 0 ? news.length - 1 : i - 1));
   const next = () => setIndex((i) => (i === news.length - 1 ? 0 : i + 1));
@@ -36,7 +56,12 @@ export default function NewsCarousel({ heading, news }: NewsCarouselProps) {
           <div className="section-divider max-w-xs mx-auto" />
         </div>
 
-        <div className="relative glass-light rounded-2xl overflow-hidden shadow-xl card-hover">
+        <div
+          className="relative glass-light rounded-2xl overflow-hidden shadow-xl card-hover"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           {/* Image */}
           <div
             className="h-48 sm:h-72 w-full bg-cover bg-center transition-transform duration-500 hover:scale-105"
@@ -53,7 +78,7 @@ export default function NewsCarousel({ heading, news }: NewsCarouselProps) {
           {/* Arrow buttons */}
           <button
             onClick={prev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
+            className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
             aria-label="Previous news"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -63,7 +88,7 @@ export default function NewsCarousel({ heading, news }: NewsCarouselProps) {
 
           <button
             onClick={next}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
+            className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
             aria-label="Next news"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">

@@ -78,13 +78,16 @@ export default async function MusicPage() {
             </div>
           </div>
 
-        {/* Programs section */}
+        {/* Podcasts section */}
         <div className="mt-12 animate-fade-in-up-delay-2">
           <div className="text-center mb-6">
             <h2 className="text-2xl md:text-4xl font-bold text-gradient mb-3 title-bg">
               {dict.music.programs}
             </h2>
             <div className="section-divider max-w-xs mx-auto" />
+          </div>
+          <div style={{ height: '150px', position: 'relative' }}>
+            <iframe src="https://embed.podcasts.apple.com/us/podcast/electrodanceworld-radio-programs/id6836433999" style={{ top: '0', left: '0', width: '100%', height: '100%', position: 'absolute', border: '0', borderRadius: '10px' }} allowFullScreen allow="encrypted-media *; fullscreen *; clipboard-write *"></iframe>
           </div>
         </div>
 

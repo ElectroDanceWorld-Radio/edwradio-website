@@ -1,8 +1,9 @@
 import { getDictionary } from './dictionaries';
 import Hero from './components/Hero';
 import WelcomeSection from './components/WelcomeSection';
+import ProductsCarousel from './components/ProductsCarousel';
 import NewsCarousel from './components/NewsCarousel';
-import CollaborationsSection from './components/CollaborationsSection';
+import PartnersSection from './components/PartnersSection';
 
 export default async function Page() {
   const dict = await getDictionary();
@@ -21,14 +22,17 @@ export default async function Page() {
         imageAlt={dict.welcome.imageAlt}
       />
 
+      {/* Products Section */}
+      <ProductsCarousel heading={dict.header.nav.products} products={dict.products.items} buyText={dict.products.buy} />
+
       {/* News Section */}
       <NewsCarousel heading={dict.news.heading} news={dict.news.items} />
 
-      {/* Content Sections */}
-      <CollaborationsSection
-        title={dict.content.section1_title}
+      {/* Partners Section */}
+      <PartnersSection
+        title={dict.aboutPage.partners}
         description={dict.content.section1_text}
-        cards={dict.content.collaborations}
+        partners={dict.aboutPage.partnersList}
       />
     </>
   );
