@@ -4,9 +4,9 @@ import path from 'path';
 
 const availablePhotos = new Set<string>();
 try {
-  const usersDir = path.join(process.cwd(), 'public', 'users');
-  if (fs.existsSync(usersDir)) {
-    fs.readdirSync(usersDir).forEach(f => availablePhotos.add(f.toLowerCase()));
+  const publicDir = path.join(process.cwd(), 'public');
+  if (fs.existsSync(publicDir)) {
+    fs.readdirSync(publicDir).forEach(f => availablePhotos.add(f.toLowerCase()));
   }
 } catch (e) {
   // Ignore errors
@@ -17,7 +17,7 @@ function getPhoto(photoPath: string): string {
   if (availablePhotos.has(fileName)) {
     return photoPath;
   }
-  return '/users/placeholder.webp';
+  return '/placeholder.webp';
 }
 
 type SocialLinks = Record<string, string | undefined>;
