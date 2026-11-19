@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { getAssetPath } from './getAssetPath';
 
 const availablePhotos = new Set<string>();
 try {
@@ -14,9 +15,9 @@ try {
 function getPhoto(photoPath: string): string {
   const fileName = path.basename(photoPath).toLowerCase();
   if (availablePhotos.has(fileName)) {
-    return photoPath;
+    return getAssetPath(photoPath);
   }
-  return '/placeholder.webp';
+  return getAssetPath('/placeholder.webp');
 }
 
 type SocialLinks = Record<string, string | undefined>;
