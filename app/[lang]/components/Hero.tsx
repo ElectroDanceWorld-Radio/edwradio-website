@@ -25,6 +25,7 @@ export default async function Hero() {
         }}
       />
 
+
       {/* Shimmer line effect */}
       <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
         <div

@@ -22,11 +22,11 @@ export default async function Page() {
         imageAlt={dict.welcome.imageAlt}
       />
 
-      {/* Products Section */}
-      <ProductsCarousel heading={dict.header.nav.products} products={dict.products.items} buyText={dict.products.buy} />
-
       {/* Latest News Carousel */}
       <NewsLatestCarouselWrapper heading={dict.news.heading} limit={3} basePath="news" />
+
+      {/* Products Section */}
+      <ProductsCarousel heading={dict.header.nav.products} products={dict.products.items} buyText={dict.products.buy} />
 
       {/* Partners Section */}
       <PartnersSection
