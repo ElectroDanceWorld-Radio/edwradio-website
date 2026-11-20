@@ -67,9 +67,9 @@ export default function AudioPlayer() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:bottom-4 md:left-64 md:right-64 md:rounded-xl md:border md:border-purple-500/30 bg-[#1a0a2e]/80 backdrop-blur-md border-t border-purple-500/30 shadow-[0_0_10px_rgba(111,42,219,0.15)]">
-      <div className="flex items-center justify-between relative px-4 py-3 md:py-4">
-        {/* Now Playing - Far left */}
-        <div className="flex items-center gap-2 text-gray-400 text-sm min-w-0">
+      <div className="flex items-center relative px-3 py-3 md:px-4 md:py-4">
+        {/* Now Playing - Left side */}
+        <div className="flex items-center gap-2 text-gray-400 text-sm min-w-0 flex-1 max-w-[calc(50%-2rem)] md:max-w-none">
           <span className={`inline-block w-2 h-2 rounded-full flex-shrink-0 ${isPlaying ? "bg-green-400 animate-pulse" : "bg-gray-600"}`} />
           <p className="text-white text-sm truncate">
             {nowPlaying || "Loading..."}
@@ -95,8 +95,8 @@ export default function AudioPlayer() {
         </button>
 
         {/* Volume Slider - Far right */}
-        <div className="flex items-center gap-2 ml-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
+        <div className="flex items-center gap-1 md:gap-2 ml-auto flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 md:w-5 md:h-5 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
             <path d="M11 5L6 9H2v6h4l5 4V5z" />
           </svg>
           <input
@@ -106,7 +106,7 @@ export default function AudioPlayer() {
             step="0.01"
             value={volume}
             onChange={(e) => setVolume(parseFloat(e.target.value))}
-            className="w-24 h-1 accent-[#6f2adb] cursor-pointer"
+            className="w-16 md:w-24 h-1 accent-[#6f2adb] cursor-pointer"
             aria-label="Volume"
           />
         </div>

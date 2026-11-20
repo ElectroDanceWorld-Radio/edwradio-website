@@ -68,31 +68,31 @@ export default function NewsLatestCarousel({ articles, heading, basePath }: News
           onTouchEnd={onTouchEnd}
         >
           {/* News card */}
-          <div className="px-16">
+          <div className="px-4 md:px-16">
             <Link href={basePath ? `./${basePath}/${item.id}` : `./${item.id}`} className="block group">
               <div className="rounded-2xl overflow-hidden shadow-xl card-hover glass-light transition-all duration-300">
                 {/* Image */}
                 <div
-                  className="h-56 sm:h-80 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                  className="h-40 sm:h-56 md:h-80 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                   style={{ backgroundImage: imageUrl ? `url(${imageUrl})` : 'linear-gradient(135deg, #6f2adb 0%, #8245e2 100%)' }}
                 />
 
                 {/* Content */}
-                <div className="p-8">
-                  <div className="flex items-center gap-3 mb-3">
+                <div className="p-4 md:p-8">
+                  <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
                     {item.category && (
-                      <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                      <span className="inline-block px-2 md:px-3 py-1 text-xs font-semibold rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
                         {item.category}
                       </span>
                     )}
-                    <span className="text-purple-300 text-sm font-medium tracking-wide">
+                    <span className="text-purple-300 text-xs md:text-sm font-medium tracking-wide">
                       {formatDisplayDate(item.date)}
                     </span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gradient transition-colors duration-300">
+                  <h3 className="text-lg md:text-2xl font-bold text-white mb-2 md:mb-4 group-hover:text-gradient transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed text-lg line-clamp-3">{item.excerpt}</p>
+                  <p className="text-gray-300 leading-relaxed text-sm md:text-lg line-clamp-3">{item.excerpt}</p>
                 </div>
               </div>
             </Link>

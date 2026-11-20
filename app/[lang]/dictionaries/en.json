@@ -124,7 +124,7 @@
     ],
     "volunteers": "Volunteers",
     "collaborators": "Team",
-    "partners": "Partners",
+    "partners": "Collaborators",
     "volunteersList": [
       { "name": "Manuel Sanchez", "role": "Analyst", "location": "Madrid, Spain", "photo": "/manuel.png", "social": { "facebook": "https://www.facebook.com/stalin.espin/", "instagram": "https://www.instagram.com/mehwolf.11/" } },
       { "name": "Yasmina Durán Soria", "role": "Journalist", "location": "Madrid, Spain", "photo": "/yasmina.jpeg", "social": { "instagram": "https://www.instagram.com/mys_ch/", "linkedin": "https://www.linkedin.com/in/yasmina-duran-soria-306792399/" } },
