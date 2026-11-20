@@ -16,10 +16,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "EDW Radio",
-  description: "EDW Radio - Your favorite radio station streaming live.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "EDW Radio",
+    description: "Live radio, podcasts, playlists & community — all electronic music in one place\nStreaming 24/7",
+  };
+}
 
 export function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'es' }];

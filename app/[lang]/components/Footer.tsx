@@ -21,12 +21,6 @@ interface FooterProps {
         applePodcasts: string;
         amazonMusic: string;
       };
-      links: {
-        title: string;
-        home: string;
-        news: string;
-        about: string;
-      };
       info: {
         title: string;
         description: string;
@@ -47,7 +41,7 @@ export default function Footer({ dict, lang }: FooterProps) {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
 
       <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Column 1: Social */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wider">{dict.footer.social.title}</h3>
@@ -122,29 +116,7 @@ export default function Footer({ dict, lang }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 3: Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wider">{dict.footer.links.title}</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href={`${prefix}/`} className="hover:text-purple-300 transition-colors duration-200">
-                  {dict.footer.links.home}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${prefix}/news`} className="hover:text-purple-300 transition-colors duration-200">
-                  {dict.footer.links.news}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${prefix}/about`} className="hover:text-purple-300 transition-colors duration-200">
-                  {dict.footer.links.about}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Info */}
+          {/* Column 3: Info */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wider">{dict.footer.info.title}</h3>
             <p className="text-sm leading-relaxed mb-4 text-gray-500">{dict.footer.info.description}</p>

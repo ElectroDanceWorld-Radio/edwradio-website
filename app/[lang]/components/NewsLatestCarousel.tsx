@@ -61,25 +61,14 @@ export default function NewsLatestCarousel({ articles, heading, basePath }: News
           <div className="section-divider max-w-xs mx-auto" />
         </div>
 
-        <div className="flex items-center gap-4">
-          {/* Prev arrow */}
-          <button
-            onClick={prev}
-            className="hidden md:flex flex-shrink-0 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
-            aria-label="Previous news"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-            </svg>
-          </button>
-
+        <div
+          className="relative"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           {/* News card */}
-          <div
-            className="flex-1 relative"
-            onTouchStart={onTouchStart}
-            onTouchMove={onTouchMove}
-            onTouchEnd={onTouchEnd}
-          >
+          <div className="px-16">
             <Link href={basePath ? `./${basePath}/${item.id}` : `./${item.id}`} className="block group">
               <div className="rounded-2xl overflow-hidden shadow-xl card-hover glass-light transition-all duration-300">
                 {/* Image */}
@@ -109,10 +98,21 @@ export default function NewsLatestCarousel({ articles, heading, basePath }: News
             </Link>
           </div>
 
+          {/* Prev arrow */}
+          <button
+            onClick={prev}
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
+            aria-label="Previous news"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+          </button>
+
           {/* Next arrow */}
           <button
             onClick={next}
-            className="hidden md:flex flex-shrink-0 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
             aria-label="Next news"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
