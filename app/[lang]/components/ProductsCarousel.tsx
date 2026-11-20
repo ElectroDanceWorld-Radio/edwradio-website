@@ -27,7 +27,8 @@ const productLinks = [
 ];
 
 export default function ProductsCarousel({ heading, products, buyText }: ProductsCarouselProps) {
-  const [index, setIndex] = useState(0);
+  const [indexMobile, setIndexMobile] = useState(0);
+  const [indexDesktop, setIndexDesktop] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
@@ -45,24 +46,25 @@ export default function ProductsCarousel({ heading, products, buyText }: Product
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    if (isLeftSwipe) next();
-    else if (isRightSwipe) prev();
+    if (isLeftSwipe) nextMobile();
+    else if (isRightSwipe) prevMobile();
   };
 
   const perSlide = 2;
-  const totalSlides = Math.ceil(products.length / perSlide);
+  const totalSlidesMobile = products.length;
+  const totalSlidesDesktop = Math.ceil(products.length / perSlide);
 
-  const prev = () => setIndex((i) => (i === 0 ? totalSlides - 1 : i - 1));
-  const next = () => setIndex((i) => (i === totalSlides - 1 ? 0 : i + 1));
+  // Navigation handlers for mobile (single product) and desktop (pairs)
+  const prevMobile = () => setIndexMobile((i) => (i === 0 ? totalSlidesMobile - 1 : i - 1));
+  const nextMobile = () => setIndexMobile((i) => (i === totalSlidesMobile - 1 ? 0 : i + 1));
+  const prevDesktop = () => setIndexDesktop((i) => (i === 0 ? totalSlidesDesktop - 1 : i - 1));
+  const nextDesktop = () => setIndexDesktop((i) => (i === totalSlidesDesktop - 1 ? 0 : i + 1));
 
-  const visibleProducts = products.slice(index * perSlide, index * perSlide + perSlide);
+  const visibleProductsDesktop = products.slice(indexDesktop * perSlide, indexDesktop * perSlide + perSlide);
+  const visibleProductMobile = products[indexMobile];
 
   return (
-    <section className="py-[50px] bg-subtle-gradient bg-grid-pattern relative overflow-hidden">
-      {/* Decorative background orbs */}
-      <div className="bg-orb bg-orb-purple w-64 md:w-96 h-64 md:h-96 -top-32 md:-top-48 -left-32 md:-left-48" />
-      <div className="bg-orb bg-orb-blue w-64 md:w-80 h-64 md:h-80 -bottom-24 md:-bottom-40 -right-24 md:-right-40" />
-
+    <section className="py-[50px] bg-grid-pattern relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         {/* Section heading */}
         <div className="text-center mb-6 animate-fade-in-up">
@@ -76,25 +78,50 @@ export default function ProductsCarousel({ heading, products, buyText }: Product
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
-          {/* Product cards grid - 2 at a time */}
-          <div className="grid grid-cols-2 gap-4">
-            {visibleProducts.map((product, i) => {
-              const globalIndex = index * perSlide + i;
+          {/* Product cards grid - 1 on mobile, 2 on desktop */}
+          {/* Mobile: single product */}
+          <div className="grid grid-cols-1 md:hidden">
+            {(() => {
+              const product = visibleProductMobile;
+              const globalIndex = indexMobile;
               return (
                 <div
                   key={globalIndex}
-                  className="glass rounded-xl overflow-hidden shadow-xl card-hover p-6 flex flex-col items-center"
+                  className="rounded-xl overflow-hidden shadow-xl card-hover p-6 flex flex-col items-center"
                 >
-                  {/* Product image */}
                   <div
                     className="h-48 w-full rounded-lg mb-4 bg-cover bg-center"
                     style={{ backgroundImage: `url(${getAssetPath(`/product${globalIndex + 1}.webp`)})` }}
                   />
-
-                  {/* Product info */}
                   <h3 className="text-xl font-semibold text-white mb-1">{product.title}</h3>
                   <p className="text-purple-300 text-sm font-medium mb-4 text-center">{product.subtitle}</p>
-
+                  <a
+                    href={productLinks[globalIndex]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary mt-auto text-center block rounded-lg py-2.5 text-white font-semibold no-underline w-full"
+                  >
+                    {buyText}
+                  </a>
+                </div>
+              );
+            })()}
+          </div>
+          {/* Desktop: 2 products at a time */}
+          <div className="hidden md:grid grid-cols-2 gap-4 px-16">
+            {visibleProductsDesktop.map((product, i) => {
+              const globalIndex = indexDesktop * perSlide + i;
+              return (
+                <div
+                  key={globalIndex}
+                  className="rounded-xl overflow-hidden shadow-xl card-hover p-6 flex flex-col items-center"
+                >
+                  <div
+                    className="h-48 w-full rounded-lg mb-4 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${getAssetPath(`/product${globalIndex + 1}.webp`)})` }}
+                  />
+                  <h3 className="text-xl font-semibold text-white mb-1">{product.title}</h3>
+                  <p className="text-purple-300 text-sm font-medium mb-4 text-center">{product.subtitle}</p>
                   <a
                     href={productLinks[globalIndex]}
                     target="_blank"
@@ -110,7 +137,7 @@ export default function ProductsCarousel({ heading, products, buyText }: Product
 
           {/* Arrow buttons */}
           <button
-            onClick={prev}
+            onClick={prevDesktop}
             className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
             aria-label="Previous products"
           >
@@ -120,7 +147,7 @@ export default function ProductsCarousel({ heading, products, buyText }: Product
           </button>
 
           <button
-            onClick={next}
+            onClick={nextDesktop}
             className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
             aria-label="Next products"
           >
@@ -130,14 +157,29 @@ export default function ProductsCarousel({ heading, products, buyText }: Product
           </button>
         </div>
 
-        {/* Dots indicator */}
-        <div className="flex justify-center gap-3 mt-6">
-          {Array.from({ length: totalSlides }, (_, i) => (
+        {/* Dots indicator - mobile: one per product */}
+        <div className="flex justify-center gap-3 mt-6 md:hidden">
+          {Array.from({ length: totalSlidesMobile }, (_, i) => (
             <button
               key={i}
-              onClick={() => setIndex(i)}
+              onClick={() => setIndexMobile(i)}
               className={`rounded-full transition-all duration-300 ${
-                i === index
+                i === indexMobile
+                  ? "w-8 h-3 bg-gradient-to-r from-purple-500 to-purple-300"
+                  : "w-3 h-3 bg-white/20 hover:bg-white/40"
+              }`}
+              aria-label={`Go to product ${i + 1}`}
+            />
+          ))}
+        </div>
+        {/* Dots indicator - desktop: one per pair */}
+        <div className="hidden md:flex justify-center gap-3 mt-6">
+          {Array.from({ length: totalSlidesDesktop }, (_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndexDesktop(i)}
+              className={`rounded-full transition-all duration-300 ${
+                i === indexDesktop
                   ? "w-8 h-3 bg-gradient-to-r from-purple-500 to-purple-300"
                   : "w-3 h-3 bg-white/20 hover:bg-white/40"
               }`}

@@ -38,11 +38,7 @@ interface PartnersSectionProps {
 
 export default function PartnersSection({ title, description, partners }: PartnersSectionProps) {
   return (
-    <section className="py-[50px] bg-subtle-gradient bg-grid-pattern relative overflow-hidden">
-      {/* Decorative background orbs */}
-      <div className="bg-orb bg-orb-purple w-64 md:w-96 h-64 md:h-96 -top-32 md:-top-48 -left-32 md:-left-48" />
-      <div className="bg-orb bg-orb-blue w-64 md:w-80 h-64 md:h-80 -bottom-24 md:-bottom-40 -right-24 md:-right-40" />
-
+    <section className="py-[50px] bg-grid-pattern relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         {/* Section heading */}
         <div className="text-center mb-6 animate-fade-in-up">

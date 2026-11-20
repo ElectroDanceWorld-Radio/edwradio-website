@@ -3,11 +3,32 @@
 import { useState, useEffect, useRef } from "react";
 
 const STREAM_URL = "https://stream-150.zeno.fm/g325adzcrm0uv?zs=_3XiPiDZTtOeiQYzXN2qZQ";
+const METADATA_URL = "https://api.zeno.fm/mounts/metadata/subscribe/g325adzcrm0uv";
 
 export default function AudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.7);
+  const [nowPlaying, setNowPlaying] = useState("");
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const eventSourceRef = useRef<EventSource | null>(null);
+
+  useEffect(() => {
+    const eventSource = new EventSource(METADATA_URL);
+    eventSourceRef.current = eventSource;
+
+    eventSource.addEventListener("message", (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        if (data.streamTitle) {
+          setNowPlaying(data.streamTitle);
+        }
+      } catch {}
+    });
+
+    return () => {
+      eventSource.close();
+    };
+  }, []);
 
   useEffect(() => {
     const audio = new Audio(STREAM_URL);
@@ -45,12 +66,14 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="fixed bottom-4 left-0 right-0 z-50 md:left-64 md:right-64 md:rounded-xl md:border md:border-purple-500/30 bg-[#1a0a2e]/80 backdrop-blur-md border-t border-purple-500/30 shadow-[0_0_10px_rgba(111,42,219,0.15)]">
-      <div className="flex items-center justify-between relative px-4 py-4 md:py-5">
-        {/* Live indicator - Far left */}
-        <div className="flex items-center gap-2 text-gray-400 text-sm">
-          <span className={`inline-block w-2 h-2 rounded-full ${isPlaying ? "bg-green-400 animate-pulse" : "bg-gray-600"}`} />
-          {isPlaying ? "LIVE" : "OFFLINE"}
+    <div className="fixed bottom-0 left-0 right-0 z-50 md:bottom-4 md:left-64 md:right-64 md:rounded-xl md:border md:border-purple-500/30 bg-[#1a0a2e]/80 backdrop-blur-md border-t border-purple-500/30 shadow-[0_0_10px_rgba(111,42,219,0.15)]">
+      <div className="flex items-center justify-between relative px-4 py-3 md:py-4">
+        {/* Now Playing - Far left */}
+        <div className="flex items-center gap-2 text-gray-400 text-sm min-w-0">
+          <span className={`inline-block w-2 h-2 rounded-full flex-shrink-0 ${isPlaying ? "bg-green-400 animate-pulse" : "bg-gray-600"}`} />
+          <p className="text-white text-sm truncate">
+            {nowPlaying || "Loading..."}
+          </p>
         </div>
 
         {/* Play/Pause Button - Absolute center */}

@@ -37,15 +37,15 @@ export default async function Hero() {
       </div>
 
       {/* Branding: Logo | Tagline */}
-      <div className="relative z-20 flex items-center gap-4 md:gap-8 max-w-5xl mx-auto px-4">
+      <div className="relative z-20 flex flex-col md:flex-row items-center gap-4 md:gap-8 max-w-5xl mx-auto px-4">
         {/* Logo - left, smaller */}
         <img
           src={getAssetPath('/logo.webp')}
           alt="EDW Radio"
-          className="h-24 md:h-32 lg:h-40 flex-shrink-0 object-contain"
+          className="h-48 md:h-64 lg:h-80 flex-shrink-0 object-contain"
         />
         {/* Vertical divider bar */}
-        <div className="hidden md:block w-px h-24 md:h-32 bg-gradient-to-b from-transparent via-purple-400 to-transparent flex-shrink-0" />
+        <div className="hidden md:block w-px h-32 md:h-48 bg-gradient-to-b from-transparent via-purple-400 to-transparent flex-shrink-0" />
         {/* Tagline - right, big text */}
         <div className="text-center md:text-left">
           <p className="text-xl md:text-3xl lg:text-4xl font-bold text-gradient leading-snug title-bg">

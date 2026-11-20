@@ -5,7 +5,7 @@
       "home": "Home",
       "products": "Products",
       "news": "News",
-      "music": "Music",
+      "music": "Listen to us",
       "about": "About"
     }
   },
@@ -82,6 +82,10 @@
   },
   "aboutPage": {
     "whoAreWe": "Who are we?",
+    "donate": "Donate",
+    "donateLink": "https://www.paypal.com/paypalme/electrodanceworld",
+    "join": "Join us",
+    "joinLink": "https://docs.google.com/forms/d/e/1FAIpQLSdXaDsFXTOJefSkYOxxsz2T9esfl0TUzguqp_rlGaq6OGS26w/viewform",
     "paragraphs": [
       "Do you like electronic music? Would you like to discover and enjoy all the styles that exist? Then, this is the project you've been looking for.",
       "We are the only electronic music project that encompasses all possible styles of electronic music in one place. From Techno to Trance, including House, Dubstep, Ambient, and many more. There are over 300 genres and subgenres of electronic music with their separate communities. We want to break down those barriers and create one big electronic family.",

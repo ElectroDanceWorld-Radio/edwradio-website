@@ -44,11 +44,7 @@ export default function NewsCarousel({ heading, news }: NewsCarouselProps) {
   const item = news[index];
 
   return (
-    <section className="py-[50px] bg-subtle-gradient bg-grid-pattern relative overflow-hidden">
-      {/* Decorative background orbs */}
-      <div className="bg-orb bg-orb-pink w-96 h-96 -top-48 -right-48" />
-      <div className="bg-orb bg-orb-purple w-80 h-80 -bottom-40 -left-40" />
-
+    <section className="py-[50px] bg-grid-pattern relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         {/* Section heading */}
         <div className="text-center mb-6 animate-fade-in-up">
@@ -57,28 +53,31 @@ export default function NewsCarousel({ heading, news }: NewsCarouselProps) {
         </div>
 
         <div
-          className="relative glass-light rounded-2xl overflow-hidden shadow-xl card-hover"
+          className="relative"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
-          {/* Image */}
-          <div
-            className="h-48 sm:h-72 w-full bg-cover bg-center transition-transform duration-500 hover:scale-105"
-            style={{ backgroundImage: `url(${getAssetPath(item.image)})` }}
-          />
+          {/* News card - single item */}
+          <div className="rounded-2xl overflow-hidden shadow-xl card-hover md:px-16">
+            {/* Image */}
+            <div
+              className="h-48 sm:h-72 w-full bg-cover bg-center transition-transform duration-500 hover:scale-105"
+              style={{ backgroundImage: `url(${getAssetPath(item.image)})` }}
+            />
 
-          {/* Content */}
-          <div className="p-8">
-            <p className="text-purple-300 text-sm font-medium mb-2 tracking-wide uppercase">{item.date}</p>
-            <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-            <p className="text-gray-300 leading-relaxed text-lg">{item.excerpt}</p>
+            {/* Content */}
+            <div className="p-8">
+              <p className="text-purple-300 text-sm font-medium mb-2 tracking-wide uppercase">{item.date}</p>
+              <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+              <p className="text-gray-300 leading-relaxed text-lg">{item.excerpt}</p>
+            </div>
           </div>
 
-          {/* Arrow buttons */}
+          {/* Arrow buttons - positioned outside the card */}
           <button
             onClick={prev}
-            className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
             aria-label="Previous news"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -88,7 +87,7 @@ export default function NewsCarousel({ heading, news }: NewsCarouselProps) {
 
           <button
             onClick={next}
-            className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 items-center justify-center rounded-full bg-[#6f2adb] text-white hover:bg-[#8245e2] transition-all duration-300 hover:scale-110"
             aria-label="Next news"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
