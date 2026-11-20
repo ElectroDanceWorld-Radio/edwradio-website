@@ -87,7 +87,7 @@ export default function ProductsCarousel({ heading, products, buyText }: Product
               return (
                 <div
                   key={globalIndex}
-                  className="rounded-xl overflow-hidden shadow-xl card-hover p-6 flex flex-col items-center"
+                  className="rounded-xl overflow-hidden shadow-xl card-hover glass-light p-6 flex flex-col items-center"
                 >
                   <div
                     className="h-48 w-full rounded-lg mb-4 bg-cover bg-center"
@@ -114,7 +114,7 @@ export default function ProductsCarousel({ heading, products, buyText }: Product
               return (
                 <div
                   key={globalIndex}
-                  className="rounded-xl overflow-hidden shadow-xl card-hover p-6 flex flex-col items-center"
+                  className="rounded-xl overflow-hidden shadow-xl card-hover glass-light p-6 flex flex-col items-center"
                 >
                   <div
                     className="h-48 w-full rounded-lg mb-4 bg-cover bg-center"

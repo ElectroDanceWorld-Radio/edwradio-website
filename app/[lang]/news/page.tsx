@@ -1,14 +1,18 @@
 import { getDictionary } from '../dictionaries';
-import NewsCarousel from '../components/NewsCarousel';
+import NewsLatestCarouselWrapper from '../components/NewsLatestCarouselWrapper';
+import NewsGridWrapper from '../components/NewsGridWrapper';
 
 export default async function NewsPage() {
   const dict = await getDictionary();
 
   return (
     <>
-      {/* News section */}
+      {/* Latest News Carousel */}
+      <NewsLatestCarouselWrapper heading={dict.newsPage.news} limit={3} />
+
+      {/* News section with card grid */}
       <div className="animate-fade-in-up-delay-1">
-        <NewsCarousel heading={dict.newsPage.news} news={dict.news.items} />
+        <NewsGridWrapper heading="" />
       </div>
 
       {/* Events section */}

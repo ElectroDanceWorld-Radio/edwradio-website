@@ -5,8 +5,9 @@
  */
 export function getAssetPath(path: string): string {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-  if (!basePath || !path.startsWith('/')) {
-    return path;
+  const normalized = path.startsWith('/') ? path : '/' + path;
+  if (!basePath) {
+    return normalized;
   }
-  return basePath + path;
+  return basePath + normalized;
 }

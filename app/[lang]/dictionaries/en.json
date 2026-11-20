@@ -27,12 +27,6 @@
     "heading": "News",
     "items": [
       {
-        "title": "A Summer Story 2025",
-        "excerpt": "This year once again at A Summer Story, it's been a while since we last visited this festival. Will we say things as they are? Will we dive into the corners nobody wants to go, while also recognizing the technical effort that...",
-        "date": "Jun 21, 2025",
-        "image": "/news1.webp"
-      },
-      {
         "title": "A Summer Story 2024",
         "excerpt": "On June 21 and 22, Arganda del Rey and La Ciudad del Rock open the doors to summer with a spectacular production and a technical and human deployment like never before. We feature an international line-up that includes...",
         "date": "Jun 21, 2024",
@@ -42,7 +36,7 @@
         "title": "What is the history of hardcore dancing?",
         "excerpt": "The History of Hardcore Dancing — Hardcore dancing, also known as Hardcore Dancing, is a cultural phenomenon that originated in the hardcore music scene. This music genre emerged in Germany in the late...",
         "date": "Mar 3, 2024",
-        "image": "/news3.webp"
+        "image": "/news/placeholder.webp"
       }
     ]
   },

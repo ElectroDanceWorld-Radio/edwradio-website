@@ -30,7 +30,7 @@ export default async function ProductsPage() {
         {/* Products grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in-up-delay-1">
           {dict.products.items.map((product, index) => (
-            <div key={index} className="glass rounded-xl p-6 hover:translate-y-[-4px] transition-transform duration-300 flex flex-col">
+            <div key={index} className="glass-light rounded-xl p-6 hover:translate-y-[-4px] transition-transform duration-300 flex flex-col">
               <div
                 className="h-48 rounded-lg mb-4 bg-cover bg-center"
                 style={{ backgroundImage: `url(${getAssetPath(`/product${index + 1}.webp`)})` }}

@@ -2,7 +2,7 @@ import { getDictionary } from './dictionaries';
 import Hero from './components/Hero';
 import WelcomeSection from './components/WelcomeSection';
 import ProductsCarousel from './components/ProductsCarousel';
-import NewsCarousel from './components/NewsCarousel';
+import NewsLatestCarouselWrapper from './components/NewsLatestCarouselWrapper';
 import PartnersSection from './components/PartnersSection';
 
 export default async function Page() {
@@ -25,8 +25,8 @@ export default async function Page() {
       {/* Products Section */}
       <ProductsCarousel heading={dict.header.nav.products} products={dict.products.items} buyText={dict.products.buy} />
 
-      {/* News Section */}
-      <NewsCarousel heading={dict.news.heading} news={dict.news.items} />
+      {/* Latest News Carousel */}
+      <NewsLatestCarouselWrapper heading={dict.news.heading} limit={3} basePath="news" />
 
       {/* Partners Section */}
       <PartnersSection

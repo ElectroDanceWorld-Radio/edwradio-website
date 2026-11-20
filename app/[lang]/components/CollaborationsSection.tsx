@@ -36,7 +36,7 @@ export default function CollaborationsSection({
           {cards.map((card, index) => (
             <div
               key={index}
-              className="glass rounded-xl p-8 card-hover flex flex-col justify-between"
+              className="glass-light rounded-xl p-8 card-hover flex flex-col justify-between"
             >
               <div>
                 <h3 className="text-xl font-bold text-white mb-4">{card.title}</h3>
