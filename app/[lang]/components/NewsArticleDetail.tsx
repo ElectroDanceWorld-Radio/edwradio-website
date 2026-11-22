@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getNewsArticles } from './getNewsArticles';
 import { MediaItem, MediaRenderer, formatDisplayDate } from './NewsCard';
 import ReactMarkdown from 'react-markdown';
+import rehypeSanitize from 'rehype-sanitize';
 
 type NewsArticleDetailProps = {
   id: string;
@@ -74,6 +75,15 @@ export default function NewsArticleDetail({ id }: NewsArticleDetailProps) {
         {/* Content with styled markdown */}
         <article className="prose prose-invert max-w-none">
           <ReactMarkdown
+            rehypePlugins={[
+              [
+                rehypeSanitize,
+                {
+                  // Disallow dangerous elements that shouldn't appear in article content
+                  disallowedTags: ['script', 'iframe', 'object', 'embed', 'form', 'input', 'button', 'select', 'textarea'],
+                },
+              ],
+            ]}
             components={{
               h2: ({ children, ...props }) => (
                 <h2

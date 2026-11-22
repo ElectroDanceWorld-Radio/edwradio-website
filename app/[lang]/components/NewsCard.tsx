@@ -82,6 +82,7 @@ function MediaRenderer({ media }: { media: MediaItem[] }) {
                   src={item.src}
                   title={item.title || 'Embedded video'}
                   className="absolute top-0 left-0 w-full h-full rounded-xl"
+                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"
@@ -102,6 +103,7 @@ function MediaRenderer({ media }: { media: MediaItem[] }) {
                   src={item.src}
                   title={item.title || 'Embedded content'}
                   className="w-full h-full rounded-xl border-0"
+                  sandbox="allow-scripts allow-same-origin"
                   loading="lazy"
                 />
               </div>

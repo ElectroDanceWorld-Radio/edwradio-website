@@ -71,9 +71,10 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
           NEXT_PUBLIC_BASE_PATH: /edwradio-website
+          NEXT_PUBLIC_BASE_URL: https://electrodanceworld-radio.github.io/edwradio-website
       - name: Create root redirect
         run: |
-          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=/edwradio-website/en/"/><script>window.location.href="/edwradio-website/en/";</script></head><body></body></html>' > out/index.html
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=/edwradio-website/en/"/><meta http-equiv="X-Content-Type-Options" content="nosniff"/><meta http-equiv="X-Frame-Options" content="DENY"/><meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/><script>window.location.href="/edwradio-website/en/";</script></head><body></body></html>' > out/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

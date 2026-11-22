@@ -240,5 +240,11 @@
       "email": "Contact Us"
     },
     "copyright": "EDW Radio © 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Page not found",
+    "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go back home"
   }
 }

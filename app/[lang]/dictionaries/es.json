@@ -240,5 +240,11 @@
       "email": "Contáctanos"
     },
     "copyright": "EDW Radio © 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Página no encontrada",
+    "description": "Lo sentimos, la página que buscas no existe o ha sido movida.",
+    "goHome": "Volver al inicio"
   }
 }

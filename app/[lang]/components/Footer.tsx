@@ -47,32 +47,32 @@ export default function Footer({ dict, lang }: FooterProps) {
             <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wider">{dict.footer.social.title}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="https://www.facebook.com/electrodanceworldradiotrance/" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://www.facebook.com/electrodanceworldradiotrance/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.social.facebook}
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/electrodanceworld.radio" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://www.instagram.com/electrodanceworld.radio" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.social.instagram}
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/channel/UCwkCG-P1mgOrouWrYpLfVKQ" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://www.youtube.com/channel/UCwkCG-P1mgOrouWrYpLfVKQ" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.social.youtube}
                 </a>
               </li>
               <li>
-                <a href="https://odysee.com/@ElectroDanceWorld" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://odysee.com/@ElectroDanceWorld" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.social.odysee}
                 </a>
               </li>
               <li>
-                <a href="https://t.me/ElectroDanceWorld" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://t.me/ElectroDanceWorld" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.social.telegram}
                 </a>
               </li>
               <li>
-                <a href="https://www.whatsapp.com/channel/0029VaCZkiP8PgsIucMd253y" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://www.whatsapp.com/channel/0029VaCZkiP8PgsIucMd253y" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.social.whatsapp}
                 </a>
               </li>
@@ -84,32 +84,32 @@ export default function Footer({ dict, lang }: FooterProps) {
             <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wider">{dict.footer.hearUsAt.title}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="https://open.spotify.com/playlist/08KWxKkBn3cOdsOlBawhEC" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://open.spotify.com/playlist/08KWxKkBn3cOdsOlBawhEC" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.hearUsAt.spotify}
                 </a>
               </li>
               <li>
-                <a href="https://www.deezer.com/us/playlist/9637651482" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://www.deezer.com/us/playlist/9637651482" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.hearUsAt.deezer}
                 </a>
               </li>
               <li>
-                <a href="https://soundcloud.com/musica-nueva-carlos852159/sets/electrodanceworld-radio" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://soundcloud.com/musica-nueva-carlos852159/sets/electrodanceworld-radio" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.hearUsAt.soundcloud}
                 </a>
               </li>
               <li>
-                <a href="https://music.youtube.com/@electrodanceworldradio" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://music.youtube.com/@electrodanceworldradio" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.hearUsAt.youtubeMusic}
                 </a>
               </li>
               <li>
-                <a href="https://podcasts.apple.com/us/podcast/electrodanceworld-radio-programs/id6836433999" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://podcasts.apple.com/us/podcast/electrodanceworld-radio-programs/id6836433999" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.hearUsAt.applePodcasts}
                 </a>
               </li>
               <li>
-                <a href="https://music.amazon.es/podcasts/395c417d-fe32-4249-9a14-9cd78d276a83" className="hover:text-purple-300 transition-colors duration-200">
+                <a href="https://music.amazon.es/podcasts/395c417d-fe32-4249-9a14-9cd78d276a83" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors duration-200">
                   {dict.footer.hearUsAt.amazonMusic}
                 </a>
               </li>
