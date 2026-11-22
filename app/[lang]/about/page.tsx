@@ -96,7 +96,7 @@ export default async function AboutPage() {
             <div className="section-divider max-w-xs mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {dict.aboutPage.foundersList.map((founder, index) => {
               const social = founder.social as SocialLinks;
               return (

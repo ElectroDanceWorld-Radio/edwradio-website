@@ -16,18 +16,21 @@ export default async function Hero() {
         }}
       />
 
-      {/* Animated gradient overlay - light shader */}
+      {/* Dark overlay for text contrast */}
+      <div className="absolute inset-0 z-1 bg-black/50" />
+
+      {/* Animated gradient shader on top of dark overlay */}
       <div
-        className="absolute inset-0 z-1 animate-gradient-shift"
+        className="absolute inset-0 z-2 animate-gradient-shift"
         style={{
-          background: 'linear-gradient(135deg, rgba(26,26,46,0.8) 0%, rgba(42,10,74,0.6) 25%, rgba(139,92,246,0.3) 50%, rgba(42,10,74,0.6) 75%, rgba(26,26,46,0.8) 100%)',
+          background: 'linear-gradient(135deg, rgba(26,26,46,0.6) 0%, rgba(42,10,74,0.4) 25%, rgba(139,92,246,0.2) 50%, rgba(42,10,74,0.4) 75%, rgba(26,26,46,0.6) 100%)',
           backgroundSize: '200% 200%',
         }}
       />
 
 
       {/* Shimmer line effect */}
-      <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 z-3 overflow-hidden pointer-events-none">
         <div
           className="absolute h-0.5 w-full animate-shimmer"
           style={{
@@ -38,7 +41,7 @@ export default async function Hero() {
       </div>
 
       {/* Branding: Logo | Tagline */}
-      <div className="relative z-20 flex flex-col md:flex-row items-center gap-4 md:gap-8 max-w-5xl mx-auto px-4">
+      <div className="relative z-4 flex flex-col md:flex-row items-center gap-4 md:gap-8 max-w-5xl mx-auto px-4">
         {/* Logo - left, smaller */}
         <img
           src={getAssetPath('/logo.webp')}
@@ -49,10 +52,10 @@ export default async function Hero() {
         <div className="hidden md:block w-px h-32 md:h-48 bg-gradient-to-b from-transparent via-purple-400 to-transparent flex-shrink-0" />
         {/* Tagline - right, big text */}
         <div className="text-center md:text-left">
-          <p className="text-xl md:text-3xl lg:text-4xl font-bold text-gradient leading-snug title-bg">
+          <p className="text-xl md:text-3xl lg:text-4xl font-bold text-gradient leading-snug title-bg drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             {dict.home.tagline}
           </p>
-          <p className="text-lg md:text-2xl lg:text-3xl text-purple-300 leading-snug mt-1">
+          <p className="text-lg md:text-2xl lg:text-3xl text-purple-300 leading-snug mt-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             {dict.home.taglineSub}
           </p>
         </div>

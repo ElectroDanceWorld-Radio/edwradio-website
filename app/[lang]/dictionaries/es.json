@@ -108,13 +108,6 @@
         }
       },
       {
-        "name": "Luisa Belen Morales Hernandez",
-        "role": "Socia Jefa Zona USA, Analista",
-        "location": "Atlanta, USA",
-        "photo": "/luisa.webp",
-        "social": {}
-      },
-      {
         "name": "Laura Blanco Vivero",
         "role": "Socia creadora Facebook",
         "location": "Villalba, Lugo, España",
@@ -126,6 +119,7 @@
     "collaborators": "Equipo",
     "partners": "Colaboradores",
     "volunteersList": [
+      { "name": "Luisa Belen Morales Hernandez", "role": "Socia Jefa Zona USA, Analista", "location": "Atlanta, USA", "photo": "/luisa.webp", "social": {} },
       { "name": "Manuel Sanchez", "role": "Analista", "location": "Madrid, España", "photo": "/manuel.png", "social": { "facebook": "https://www.facebook.com/stalin.espin/", "instagram": "https://www.instagram.com/mehwolf.11/" } },
       { "name": "Yasmina Durán Soria", "role": "Periodista", "location": "Madrid, España", "photo": "/yasmina.jpeg", "social": { "instagram": "https://www.instagram.com/mys_ch/", "linkedin": "https://www.linkedin.com/in/yasmina-duran-soria-306792399/" } },
       { "name": "Macarena Carrión", "role": "Diseñadora Gráfica", "location": "Tucuman, Argentina", "photo": "/macarena.png", "social": { "instagram": "https://www.instagram.com/mcarrion802/" } },
