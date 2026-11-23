@@ -1,20 +1,13 @@
 import { getAssetPath } from './getAssetPath';
 import { getDictionary } from '../dictionaries';
+import ParallaxBackground from './ParallaxBackground';
 
 export default async function Hero() {
   const dict = await getDictionary();
   return (
     <section className="relative h-[500px] md:h-[650px] w-full flex items-center justify-center overflow-hidden">
-      {/* Static background */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${getAssetPath('/hero.webp')})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundColor: '#1a1a2e',
-        }}
-      />
+      {/* Parallax background */}
+      <ParallaxBackground imageUrl={getAssetPath('/hero.webp')} speed={0.25} />
 
       {/* Dark overlay for text contrast */}
       <div className="absolute inset-0 z-1 bg-black/50" />
@@ -38,6 +31,25 @@ export default async function Hero() {
             background: 'linear-gradient(90deg, transparent, rgba(139,92,246,0.6), transparent)',
           }}
         />
+      </div>
+
+      {/* Floating particles */}
+      <div className="absolute inset-0 z-3 overflow-hidden pointer-events-none">
+        {[...Array(30)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              width: `${3 + (i % 4) * 2}px`,
+              height: `${3 + (i % 4) * 2}px`,
+              left: `${(i * 3.7) % 100}%`,
+              bottom: '-10px',
+              background: `radial-gradient(circle, rgba(139,92,246,${0.5 - (i % 5) * 0.08}) 0%, transparent 70%)`,
+              animation: `particle-float ${5 + (i % 7) * 1.5}s linear infinite`,
+              animationDelay: `${(i * 0.4) % 6}s`,
+            }}
+          />
+        ))}
       </div>
 
       {/* Branding: Logo | Tagline */}

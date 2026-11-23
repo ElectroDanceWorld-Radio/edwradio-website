@@ -56,13 +56,23 @@ export default function AudioPlayer() {
     if (!audioRef.current) return;
     if (isPlaying) {
       audioRef.current.pause();
+      setIsPlaying(false);
     } else {
-      // Reconnect stream on play
-      audioRef.current.src = STREAM_URL;
-      audioRef.current.load();
-      audioRef.current.play().catch(() => {});
+      // Reconnect stream on play for live streaming
+      const audio = audioRef.current;
+      audio.src = STREAM_URL;
+      audio.addEventListener("canplay", () => {
+        audio.play()
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch((e) => {
+            console.error("Play failed:", e);
+            setIsPlaying(false);
+          });
+      }, { once: true });
+      audio.load();
     }
-    setIsPlaying(!isPlaying);
   };
 
   return (
@@ -70,7 +80,11 @@ export default function AudioPlayer() {
       <div className="flex items-center relative px-3 py-3 md:px-4 md:py-4">
         {/* Now Playing - Left side */}
         <div className="flex items-center gap-2 text-gray-400 text-sm min-w-0 flex-1 max-w-[calc(50%-2rem)] md:max-w-none">
-          <span className={`inline-block w-2 h-2 rounded-full flex-shrink-0 ${isPlaying ? "bg-green-400 animate-pulse" : "bg-gray-600"}`} />
+          <div className="flex items-end gap-0.5 h-4 flex-shrink-0">
+            <span className={`w-0.5 rounded-full transition-all duration-300 ${isPlaying ? "bg-[#8b5cf6] animate-[eq-bar-1_0.8s_ease-in-out_infinite]" : "bg-gray-600 h-1"}`} />
+            <span className={`w-0.5 rounded-full transition-all duration-300 ${isPlaying ? "bg-[#8b5cf6] animate-[eq-bar-2_0.6s_ease-in-out_infinite]" : "bg-gray-600 h-1"}`} />
+            <span className={`w-0.5 rounded-full transition-all duration-300 ${isPlaying ? "bg-[#8b5cf6] animate-[eq-bar-3_0.7s_ease-in-out_infinite]" : "bg-gray-600 h-1"}`} />
+          </div>
           <p className="text-white text-sm truncate">
             {nowPlaying || "Loading..."}
           </p>

@@ -78,8 +78,31 @@
     "whoAreWe": "¿Quiénes somos?",
     "donate": "Donar",
     "donateLink": "https://www.paypal.com/paypalme/electrodanceworld",
-    "join": "Únete a nosotros",
+    "join": "Únete como DJ",
     "joinLink": "https://docs.google.com/forms/d/e/1FAIpQLSdsgrtKtZ9wPTMyttTgvBssEVdZzq4KT2c5ygbI4L4WzcU-Tw/viewform",
+    "joinVolunteer": "Únete como voluntario",
+    "joinVolunteerLink": "https://docs.google.com/forms/d/e/1FAIpQLSes8Fe8Ifv0C678TTT9fVsYWnbDFrSkDGQGIWAJFKB3ewmhcA/viewform",
+    "joinUs": "Únete a nosotros",
+    "djBenefits": "Ventajas DJs",
+    "djBenefitsList": [
+      "Acceso a nuestra selección de canciones con permisos de copyright para usar en tus transmisiones/sesiones, siempre y cuando nos menciones o pongas nuestro logo.",
+      "Posible Sesión, en una importante radio FM de España.",
+      "Soporte Técnico asociado a la configuración de emisión o retransmisión y arreglo de los problemas con ella.",
+      "Que cubramos un evento de forma totalmente gratuita para ti, en el que tú pinches, siempre y cuando cualquiera de nuestros voluntarios pueda hacerlo por disponibilidad o distancia del evento.",
+      "Reel/Tiktok sobre tu emisión o tu pinchando en nuestras redes sociales a partir de la 3º emisión/programa o en adelante según la disponibilidad de nuestros voluntarios para su realización."
+    ],
+    "volunteerBenefits": "Ventajas Voluntariado",
+    "volunteerBenefitsList": [
+      "Ofrecer sus servicios o productos para nuestras plataformas, llevándose un 30% de las ganancias la fundación, como donación para la mejora del proyecto.",
+      "Formación en su área o enseñar lo que sepamos de esa área.",
+      "Servicio técnico informático (Software) si lo necesitas para poder desarrollar correctamente las tareas asignadas.",
+      "VPN con protección post cuántica, eliminación de trackers (seguimiento, anunciantes), protección contra ataques mitm (Hackers), reducción de tarifa de datos en un 30%, de ser necesario para el desempeño de sus funciones.",
+      "A partir de 5 tareas/subtareas realizadas puede cubrir eventos (tanto socios como voluntarios). Siempre pensando en quien es el mejor que puede ir según sus habilidades personales y número de tareas contabilizadas, sobretodo cuando son festivales.",
+      "Ponerte en la página de agradecimientos en esta web con el link a las redes sociales que nos proporciones, aparte de la mención o etiqueta de colaboración en todo vídeo en el que participes en su grabación o edición. Nos gusta agradecer el trabajo de nuestros voluntarios ya que son parte de el engranaje del proyecto y sin ellos esto no seria posible llevarlo a cabo.",
+      "Validación de aptitudes por LinkedIn.",
+      "Todo tu trabajo en el proyecto sirve como portafolio para que te contraten en el trabajo que deseas, como ha pasado con algunos de nuestros voluntarios que han conseguido el trabajo de sus sueños gracias a usarnos como su portafolio profesional."
+    ],
+    "joinNow": "Únete pulsando aquí",
     "paragraphs": [
       "¿Te gusta la música electrónica? ¿Te gustaría conocer y disfrutar de todos los estilos que existen? Entonces, este es el proyecto que estabas buscando.",
       "Somos el único proyecto de electrónica que engloba todos los estilos de música electrónica posibles en un mismo lugar. Desde el Techno al Trance, pasando por el House, el Dubstep, el Ambient y muchos más. Hay más de 300 géneros y subgéneros de música electrónica con sus comunidades separadas. Nosotros queremos romper esas barreras y crear una gran familia electrónica.",
@@ -156,7 +179,7 @@
       { "name": "Techno7e7", "role": "+119 K", "location": "Madrid, España", "photo": "/techno7e7.webp", "social": { "instagram": "https://www.instagram.com/techno7e7/", "facebook": "https://www.facebook.com/techno7e7community/", "twitter": "https://x.com/techno7e7", "tiktok": "https://www.tiktok.com/@techno7e7" } },
       { "name": "Goody Music", "role": "+75 K", "location": "Roma, Italia", "photo": "/goodymusic.jpg", "social": { "instagram": "https://www.instagram.com/goodymusicproduction/", "facebook": "https://www.facebook.com/goodymusicproduction/", "twitter": "https://x.com/ANTIBEMUSIC" } },
       { "name": "You Are The Club", "role": "+44 K", "location": "Madrid, España", "photo": "/youaretheclub.png", "social": { "instagram": "https://www.instagram.com/you_are_the_club", "facebook": "https://www.facebook.com/youaretheclubmadrid/", "tiktok": "https://www.tiktok.com/@you_are_the_club" } },
-      { "name": "Groover", "role": "+16 K", "location": "París, Francia", "photo": "/groover.png", "social": { "facebook": "https://www.facebook.com/HeyGroover", "twitter": "https://x.com/HeyGroover" } },
+      { "name": "Groover", "role": "+16 K", "location": "París, Francia", "photo": "/groover.png", "social": { "instagram": "https://www.instagram.com/groover.es/", "facebook": "https://www.facebook.com/HeyGroover", "twitter": "https://x.com/HeyGroover" } },
       { "name": "KREAM Madrid", "role": "+15 K", "location": "Alcorcón, España", "photo": "/kream.webp", "social": { "instagram": "https://www.instagram.com/kream_madrid/", "facebook": "https://www.facebook.com/Kr3am/", "tiktok": "https://www.tiktok.com/@kream.madrid" } },
       { "name": "Mantovani", "role": "+467", "location": "USA & Europa", "photo": "/mantovani.webp", "social": { "facebook": "https://www.facebook.com/mantovanieurope" } },
       { "name": "Napoleon Records", "role": "+384", "location": "Estocolmo, Suecia", "photo": "/napoleon.webp", "social": { "instagram": "https://www.instagram.com/napoleon.records", "facebook": "https://www.facebook.com/Napoleonrecords", "twitter": "https://x.com/Napoleonrecords", "tiktok": "https://www.tiktok.com/@napoleonrecords" } }
