@@ -3,7 +3,7 @@ import { getNewsArticles } from './[lang]/components/getNewsArticles';
 
 export const dynamic = 'force-static';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://electrodanceworld-radio.github.io/edwradio-website';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://edwradio.com';
 
 const locales = ['en', 'es'] as const;
 const staticRoutes = ['', '/about', '/music', '/news', '/products'] as const;
