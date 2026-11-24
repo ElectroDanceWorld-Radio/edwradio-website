@@ -136,6 +136,13 @@
         "location": "Villalba, Lugo, España",
         "photo": "/laura.webp",
         "social": {}
+      },
+      {
+        "name": "Roberto Romero Valls",
+        "role": "Creador Pagina Trance",
+        "location": "Madrid, España",
+        "photo": "/roberto.png",
+        "social": {}
       }
     ],
     "volunteers": "Voluntarios",
@@ -154,7 +161,8 @@
       { "name": "Víctor Fernández Rodríguez", "role": "Productor/Marketing", "location": "Madrid, España", "photo": "/victor.png", "social": {} },
       { "name": "Romina", "role": "Diseño 3D, Metaverso, Modeladora 3D, Administrativa", "location": "Madrid, España", "photo": "/romina.png", "social": { "instagram": "https://www.instagram.com/_j0xter/" } },
       { "name": "Ángel Gómez Baquedano", "role": "Reportero, Analista, Video", "location": "Madrid, España", "photo": "/placeholder.webp", "social": {} },
-      { "name": "Jota (bjota)", "role": "Promotor eventos, Analista", "location": "SS Reyes, España", "photo": "/placeholder.webp", "social": {} }
+      { "name": "Jota (bjota)", "role": "Promotor eventos, Analista", "location": "SS Reyes, España", "photo": "/placeholder.webp", "social": {} },
+      { "name": "Daniel Martínez", "role": "Desarrollador web", "location": "", "photo": "https://avatars.githubusercontent.com/u/113197634", "social": { "github": "https://github.com/DisketteFox" } }
     ],
     "collaboratorsList": [
       { "name": "Giovanni Salas", "role": "Analista, CEO EDW Chile", "location": "Penco, Chile", "photo": "/giovanni.png", "social": {} },
@@ -164,7 +172,6 @@
       { "name": "Luis Tapia", "role": "marketing, Diseño", "location": "Ciudad de México, México", "photo": "/luis.png", "social": {} },
       { "name": "Yocelin Serrano", "role": "Diseño", "location": "Madrid, España", "photo": "/yocelin.png", "social": {} },
       { "name": "Georgina Zinno", "role": "Periodista", "location": "Ámsterdam, Holanda", "photo": "/georgina.png", "social": {} },
-      { "name": "Roberto Romero Valls", "role": "Creador Pagina Trance", "location": "Madrid, España", "photo": "/roberto.png", "social": {} },
       { "name": "Caodin", "role": "Voluntaria", "location": "Maspalomas, España", "photo": "/caodin.png", "social": {} },
       { "name": "Laura Calzadilla Benavente", "role": "Voluntaria", "location": "Cartagena, España", "photo": "/laura.png", "social": {} },
       { "name": "Banesa Mejia", "role": "Legal Voluntaria", "location": "Ciudad de México, México", "photo": "/banesa.png", "social": {} },

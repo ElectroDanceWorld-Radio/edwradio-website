@@ -4,7 +4,7 @@ import { Tabs, TabPanel } from './Tabs';
 import { getAssetPath } from './getAssetPath';
 
 function getPhoto(photoPath: string): string {
-  return getAssetPath(photoPath);
+  return /^https?:\/\//.test(photoPath) ? photoPath : getAssetPath(photoPath);
 }
 
 type SocialLinks = Record<string, string | undefined>;
@@ -37,18 +37,27 @@ function PersonCard({ name, role, location, photo, social, size = 'small' }: Per
 
       <h3 className={`${isLarge ? 'text-xl' : 'text-lg'} font-bold text-white mb-1`}>{name}</h3>
       <p className="text-purple-300 text-sm mb-1">{role}</p>
-      <p className="text-gray-400 text-xs mb-4 flex items-center justify-center gap-1">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-        </svg>
-        {location}
-      </p>
+      {location && (
+        <p className="text-gray-400 text-xs mb-4 flex items-center justify-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+          </svg>
+          {location}
+        </p>
+      )}
 
       <div className="flex justify-center gap-3">
         {social.instagram && (
           <a href={social.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.806 0-1.454.651-1.454 1.454s.651 1.454 1.454 1.454 1.454-.651 1.454-1.454-.651-1.454-1.454-1.454z"/>
+            </svg>
+          </a>
+        )}
+        {social.github && (
+          <a href={social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-400 hover:text-purple-400 transition-colors">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.112.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6 0c2.292-1.552 3.3-1.23 3.3-1.23.653 1.653.24 2.873.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.804 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.286 0 .319.216.694.825.576C20.565 21.795 24 17.3 24 12.297c0-6.627-5.373-12-12-12" />
             </svg>
           </a>
         )}
@@ -323,7 +332,7 @@ export default function AboutPageClient({ dict }: AboutPageClientProps) {
                 </h3>
                 <div className="section-divider max-w-xs mx-auto" />
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {aboutPage.foundersList.map((founder, index) => (
                   <PersonCard
                     key={index}

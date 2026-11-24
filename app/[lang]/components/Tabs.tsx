@@ -28,12 +28,12 @@ export function Tabs({ tabs, children, defaultTab }: TabsProps) {
       <div>
         {/* Tab navigation */}
         <div className="flex justify-center mb-10">
-          <div className="inline-flex rounded-xl bg-white/5 border border-purple-500/20 p-1.5 gap-1">
+          <div className="grid w-full max-w-xl grid-cols-2 rounded-xl bg-white/5 border border-purple-500/20 p-1.5 gap-1 sm:inline-flex sm:w-auto sm:grid-cols-none">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 ${
+                className={`min-w-0 px-3 py-2.5 rounded-lg text-xs leading-tight text-center font-semibold transition-all duration-300 sm:px-5 sm:text-sm ${
                   activeTab === tab.id
                     ? 'bg-purple-500/30 text-white shadow-[0_0_12px_rgba(139,92,246,0.3)]'
                     : 'text-gray-400 hover:text-white hover:bg-white/5'

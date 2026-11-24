@@ -122,6 +122,16 @@ body {
   50% { height: 14px; }
 }
 
+@keyframes player-title-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.player-title-marquee {
+  animation: player-title-marquee 16s linear infinite;
+}
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);

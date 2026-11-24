@@ -136,6 +136,13 @@
         "location": "Villalba, Lugo, Spain",
         "photo": "/laura.webp",
         "social": {}
+      },
+      {
+        "name": "Roberto Romero Valls",
+        "role": "Trance Page Creator",
+        "location": "Madrid, Spain",
+        "photo": "/roberto.png",
+        "social": {}
       }
     ],
     "volunteers": "Volunteers",
@@ -154,7 +161,8 @@
       { "name": "Víctor Fernández Rodríguez", "role": "Producer/Marketing", "location": "Madrid, Spain", "photo": "/victor.png", "social": {} },
       { "name": "Romina", "role": "3D Design, Metaverse, 3D Modeler, Admin", "location": "Madrid, Spain", "photo": "/romina.png", "social": { "instagram": "https://www.instagram.com/_j0xter/" } },
       { "name": "Ángel Gómez Baquedano", "role": "Reporter, Analyst, Video", "location": "Madrid, Spain", "photo": "/placeholder.webp", "social": {} },
-      { "name": "Jota (bjota)", "role": "Events Promoter, Analyst", "location": "San Sebastián de los Reyes, Spain", "photo": "/placeholder.webp", "social": {} }
+      { "name": "Jota (bjota)", "role": "Events Promoter, Analyst", "location": "San Sebastián de los Reyes, Spain", "photo": "/placeholder.webp", "social": {} },
+      { "name": "Daniel Martínez", "role": "Web Developer", "location": "", "photo": "https://avatars.githubusercontent.com/u/113197634", "social": { "github": "https://github.com/DisketteFox" } }
     ],
     "collaboratorsList": [
       { "name": "Giovanni Salas", "role": "Analyst, CEO EDW Chile", "location": "Penco, Chile", "photo": "/giovanni.png", "social": {} },
@@ -164,7 +172,6 @@
       { "name": "Luis Tapia", "role": "Marketing, Design", "location": "Mexico City, Mexico", "photo": "/luis.png", "social": {} },
       { "name": "Yocelin Serrano", "role": "Design", "location": "Madrid, Spain", "photo": "/yocelin.png", "social": {} },
       { "name": "Georgina Zinno", "role": "Journalist", "location": "Amsterdam, Netherlands", "photo": "/georgina.png", "social": {} },
-      { "name": "Roberto Romero Valls", "role": "Trance Page Creator", "location": "Madrid, Spain", "photo": "/roberto.png", "social": {} },
       { "name": "Caodin", "role": "Volunteer", "location": "Maspalomas, Spain", "photo": "/caodin.png", "social": {} },
       { "name": "Laura Calzadilla Benavente", "role": "Volunteer", "location": "Cartagena, Spain", "photo": "/laura.png", "social": {} },
       { "name": "Banesa Mejia", "role": "Legal Volunteer", "location": "Mexico City, Mexico", "photo": "/banesa.png", "social": {} },

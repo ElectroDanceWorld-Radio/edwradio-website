@@ -9,8 +9,29 @@ export default function AudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.7);
   const [nowPlaying, setNowPlaying] = useState("");
+  const [isTitleOverflowing, setIsTitleOverflowing] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const eventSourceRef = useRef<EventSource | null>(null);
+  const titleContainerRef = useRef<HTMLDivElement | null>(null);
+  const titleMeasureRef = useRef<HTMLSpanElement | null>(null);
+
+  const title = nowPlaying || "Loading...";
+
+  useEffect(() => {
+    const container = titleContainerRef.current;
+    const titleMeasure = titleMeasureRef.current;
+    if (!container || !titleMeasure) return;
+
+    const updateOverflow = () => {
+      setIsTitleOverflowing(titleMeasure.getBoundingClientRect().width > container.clientWidth);
+    };
+
+    updateOverflow();
+    const resizeObserver = new ResizeObserver(updateOverflow);
+    resizeObserver.observe(container);
+
+    return () => resizeObserver.disconnect();
+  }, [nowPlaying]);
 
   useEffect(() => {
     const eventSource = new EventSource(METADATA_URL);
@@ -77,7 +98,7 @@ export default function AudioPlayer() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:bottom-4 md:left-64 md:right-64 md:rounded-xl md:border md:border-purple-500/30 bg-[#1a0a2e]/80 backdrop-blur-md border-t border-purple-500/30 shadow-[0_0_10px_rgba(111,42,219,0.15)]">
-      <div className="flex items-center relative px-3 py-3 md:px-4 md:py-4">
+      <div className="flex items-center relative px-3 py-5 md:px-4 md:py-4">
         {/* Now Playing - Left side */}
         <div className="flex items-center gap-2 text-gray-400 text-sm min-w-0 flex-1 max-w-[calc(50%-2rem)] md:max-w-none">
           <div className="flex items-end gap-0.5 h-4 flex-shrink-0">
@@ -85,9 +106,19 @@ export default function AudioPlayer() {
             <span className={`w-0.5 rounded-full transition-all duration-300 ${isPlaying ? "bg-[#8b5cf6] animate-[eq-bar-2_0.6s_ease-in-out_infinite]" : "bg-gray-600 h-1"}`} />
             <span className={`w-0.5 rounded-full transition-all duration-300 ${isPlaying ? "bg-[#8b5cf6] animate-[eq-bar-3_0.7s_ease-in-out_infinite]" : "bg-gray-600 h-1"}`} />
           </div>
-          <p className="text-white text-sm truncate">
-            {nowPlaying || "Loading..."}
-          </p>
+          <div ref={titleContainerRef} className="relative min-w-0 flex-1 overflow-hidden text-white text-sm">
+            <span ref={titleMeasureRef} aria-hidden="true" className="absolute w-max invisible whitespace-nowrap">
+              {title}
+            </span>
+            {isTitleOverflowing ? (
+              <div className="player-title-marquee flex w-max whitespace-nowrap">
+                <span className="shrink-0 pr-8">{title}</span>
+                <span aria-hidden="true" className="shrink-0 pr-8">{title}</span>
+              </div>
+            ) : (
+              <p className="truncate">{title}</p>
+            )}
+          </div>
         </div>
 
         {/* Play/Pause Button - Absolute center */}
